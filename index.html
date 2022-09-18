@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container header-wrapper">
+
+            <a href="index.html" class="logo header-logo"><span class="accent">Web</span>Studio</a>
+                
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a href="index.html" class="header-nav__link current">Студія</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a href="portfolio.html" class="header-nav__link">Портфоліо</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+                
+            <ul class="contacts-list">
+                <li>
+                    <a href="mailto:info@devstudio.com" class="contacts-list__link"><svg viewBox="0 0 43 32" width="16" heigh="12" class="icon shape-contact">
+                                        <use xlink:href="./images/svgs/contacts-icons.svg#icon-envelope"></use>
+                                    </svg>
+                                        info@devstudio.com</a>
+                </li>
+                
+                <li>
+                    <a href="tel:+380961111111" class="contacts-list__link">
+                        <svg viewBox="0 0 20 32" width="10" heigh="16" class="icon shape-contact">
+                                        <use xlink:href="./images/svgs/contacts-icons.svg#icon-smartphone"></use>
+                                    </svg>
+                                        +38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    
+
+    <main>
+        <section class="section hero-section">
+            <div class="container">
+                <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
+                <button type="button" class="hero-button">Замовити послугу</button>
+            </div>
+        </section>
+
+
+
+        <section class="section">
+            <div class="container">
+                <h2 class="visually-hidden">Наші переваги</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <div class="benefits-icon__wrapper">
+                            <svg viewBox="0 0 32 32" width="70" heigh="70" class="icon shape-benefits">
+                                <use xlink:href="./images/svgs/benefits-icons.svg#icon-antenna"></use>
+                            </svg>
+                        </div>
+                        <h3 class="benefits__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                        <p class="benefits__paragraph">Ідейні міркування, і навіть початок повсякденної роботи з формування
+                            позиції.</p>
+                    </li>
+                    <li>
+                        <div class="benefits-icon__wrapper">
+                            <svg viewBox="0 0 32 32" width="70" heigh="70" class="icon shape-benefits">
+                                <use xlink:href="./images/svgs/benefits-icons.svg#icon-clock"></use>
+                            </svg>
+                        </div>
+                        <h3 class="benefits__title">ПУНКТУАЛЬНІСТЬ</h3>
+                        <p class="benefits__paragraph">Завдання організації, особливо рамки і місце навчання кадрів тягне у
+                            себе.</p>
+                    </li>
+                    <li>
+                        <div class="benefits-icon__wrapper">
+                            <svg viewBox="0 0 32 32" width="70" heigh="70" class="icon shape-benefits">
+                                <use xlink:href="./images/svgs/benefits-icons.svg#icon-diagram"></use>
+                            </svg>
+                        </div>
+                        <h3 class="benefits__title">ПЛАНУВАННЯ</h3>
+                        <p class="benefits__paragraph">Так само консультація з широким активом значною мірою зумовлює.</p>
+                    </li>
+                    <li>
+                        <div class="benefits-icon__wrapper">
+                            <svg viewBox="0 0 32 32" width="70" heigh="70" class="icon shape-benefits">
+                                <use xlink:href="./images/svgs/benefits-icons.svg#icon-astronaut"></use>
+                            </svg>
+                        </div>
+                        <h3 class="benefits__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                        <p class="benefits__paragraph">Значимість цих проблем настільки очевидна, що реалізація планових
+                            завдань.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section profile">
+            <div class="container">
+                <h2 class="profile__title">Чим ми займаємося</h2>
+                <ul class="profile__list">
+                    <li>
+                        <img src="./images/img1.jpg" alt="Picture_01" width="370" height="294">
+                    </li>
+                    <li>
+                        <img src="./images/img2.jpg" alt="Picture_02" width="370" height="294">
+                    </li>
+                    <li>
+                        <img src="./images/img3.jpg" alt="Picture_03" width="370" height="294">
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="section members">
+            <div class="container">
+                <h2 class="members__title">Наша команда</h2>
+                <ul class="members-list">
+                    <li>
+                        <img src="images/id1.jpg" alt="photo of Igor Demyanenko" width="270" height="260"
+                            class="members-list__img">
+                        <div class="members__container">
+                            <h3 class="members-list__title">Ігор Дем'яненко</h3>
+                            <p class="members-list__paragraph">Product Designer</p>
+                            <ul class="members-icon__list">
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-linkedin"></use>
+                                    </svg></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="images/op1.jpg" alt="photo of Olga Pyerina" width="270" height="260"
+                            class="members-list__img">
+                        <div class="members__container">
+                            <h3 class="members-list__title">Ольга Рєпіна</h3>
+                            <p class="members-list__paragraph">Frontend Developer</p>
+                            <ul class="members-icon__list">
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-linkedin"></use>
+                                    </svg></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="images/mt1.jpg" alt="photo of Mykola Tarasov" width="270" height="260"
+                            class="members-list__img">
+                        <div class="members__container">
+                            <h3 class="members-list__title">Микола Тарасов</h3>
+                            <p class="members-list__paragraph">Marketing</p>
+                            <ul class="members-icon__list">
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-linkedin"></use>
+                                    </svg></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="images/me1.jpg" alt="photo of Myhaylo Yermakov" width="270" height="260"
+                            class="members-list__img">
+                        <div class="members__container">
+                            <h3 class="members-list__title">Михайло Єрмаков</h3>
+                            <p class="members-list__paragraph">UI Designer</p>
+                            <ul class="members-icon__list">
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-instagram"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-twitter"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-facebook"></use>
+                                    </svg></a>
+                                </li>
+
+                                <li class="members-icon_item">
+                                    <a href=""><svg viewBox="0 0 32 32" class="icon shape-members">
+                                        <use xlink:href="./images/svgs/members-icons.svg#icon-linkedin"></use>
+                                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section clients">
+            <div class="container">
+                <h2 class="clients__title">Постійні клієнти</h2>
+                <ul class="clients__list">
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client1"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client2"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client3"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client4"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client5"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="clients__wrapper">
+                                <svg viewBox="0 0 59 32" class="icon shape-members">
+                                    <use xlink:href="./images/svgs/clients-icons.svg#icon-client6"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-list">
+                <div class="address__wrapper">
+                    <a href="index.html" class="logo footer-logo"><span class="accent">Web</span>Studio</a>
+
+                    <address class="footer-address">
+                        м. Київ, пр-т Лесі Українки, 26
+                        <a href="mailto:info@devstudio.com" class="address-item">info@devstudio.com</a>
+                        <a href="tel:+380961111111" class="address-item">+38 096 111 11 11</a>
+                    </address>
+                </div>
+
+                <div class="footer-join">
+                    <h3 class="footer-join__title">Приєднуйтесь</h3>
+                    <ul class="footer-join__list">
+                        <li class="footer-icon_item">
+                            <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape">
+                                <use xlink:href="./images/svgs/members-icons.svg#icon-instagram"></use>
+                            </svg></a>
+                        </li>
+
+                        <li class="footer-icon_item">
+                            <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape">
+                                <use xlink:href="./images/svgs/members-icons.svg#icon-twitter"></use>
+                            </svg></a>
+                        </li>
+
+                        <li class="footer-icon_item">
+                            <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape">
+                                <use xlink:href="./images/svgs/members-icons.svg#icon-facebook"></use>
+                            </svg></a>
+                        </li>
+
+                        <li class="footer-icon_item">
+                            <a href=""><svg viewBox="0 0 32 32" width="44" class="icon shape">
+                                <use xlink:href="./images/svgs/members-icons.svg#icon-linkedin"></use>
+                            </svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        
+
+    </footer>
+
+</body>
+
+</html>
