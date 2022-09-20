@@ -122,6 +122,8 @@ header {
 }
 
 header a {
+    display: flex;
+    align-items: center;
     padding-bottom: 32px;
     padding-top: 32px;
 }
@@ -243,7 +245,9 @@ header svg:focus {
     height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
-    padding: 25px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
@@ -331,19 +335,14 @@ header svg:focus {
     margin-top: 16px;
 }
 
-.members-icon__list li {
-    width: 44px;
-    height: 44px;
-    background: var(--primary-white);
-    border-radius: 50%;
-}
-
 .members-icon__list svg {
     fill: var(--icon-color);
+    width: 44px;
+    height: 44px;
 }
 
-.members-icon__list svg:hover,
-.members-icon__list svg:focus {
+.members-icon__list li:hover svg,
+.members-icon__list a:focus svg {
     fill: var(--primary-white);
     background: var(--accent-color);
     border-radius: 50%;
@@ -495,30 +494,21 @@ footer {
 
 .clients__list {
     display: flex;
-    justify-content: center;
     gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-.clients__wrapper {
+.clients__list a {
+    justify-content: center;
+    align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    padding: 16px 32px;
+    border: 1px solid var(--icon-color);
 }
 
-.clients__list svg {
+.clients svg {
+    fill: var(--icon-color);
     width: 106px;
     height: 60px;
-    fill: var(--icon-color)
-}
-
-.clients__wrapper:hover,
-.clients__wrapper:focus {
-    border: 1px solid var(--accent-color);
-}
-
-.clients__wrapper:hover svg,
-.clients__wrapper:focus svg {
-    fill: var(--accent-color);
 }
