@@ -335,6 +335,16 @@ header svg:focus {
     margin-top: 16px;
 }
 
+.members-icon__list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    background: var(--primary-white);
+    border-radius: 50%;
+}
+
 .members-icon__list svg {
     fill: var(--icon-color);
     width: 44px;
@@ -356,8 +366,9 @@ footer {
     padding-bottom: 60px;
 }
 
-.footer-list {
+.footer-wrapper {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-logo {
@@ -390,10 +401,7 @@ footer {
 }
 
 .footer-join {
-    width: 206px;
-    height: 80px;
     margin-left: 70px;
-    margin-top: 12px;
 }
 
 .footer-join__title {
@@ -412,13 +420,27 @@ footer {
 
 }
 
-.footer-join__list svg {
-    fill: var(--icon-color);
-    background: var(--primary-white);
+.footer-join__list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
 
+.footer-join__list svg {
+    fill: var(--icon-color);
+}
+
 .footer-join__list li:hover svg {
+    fill: var(--primary-white);
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.footer-join__list a:focus svg {
     fill: var(--primary-white);
     background: var(--accent-color);
     border-radius: 50%;
@@ -458,6 +480,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.partners__list li:hover,
+.partners__list li:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .partners__container {
@@ -500,15 +527,24 @@ footer {
 }
 
 .clients__list a {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);
+    border-radius: 4px;
 }
 
 .clients svg {
     fill: var(--icon-color);
-    width: 106px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+.clients__list svg:hover,
+.clients__list a:focus svg {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
 }
