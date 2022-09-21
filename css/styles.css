@@ -130,6 +130,8 @@ header a {
 
 header svg {
     fill: var(--secondary-color);
+    width: 20;
+    height: 20;
 }
 
 header svg:hover,
@@ -345,15 +347,19 @@ header svg:focus {
     border-radius: 50%;
 }
 
-.members-icon__list svg {
-    fill: var(--icon-color);
-    width: 44px;
-    height: 44px;
+.members svg:hover,
+.members svg:focus {
+    fill: var(--primary-white);
+    width: 44;
+    height: 44;
 }
 
-.members-icon__list li:hover svg,
-.members-icon__list a:focus svg {
-    fill: var(--primary-white);
+.members-icon__list svg {
+    fill: var(--icon-color);
+}
+
+.members-icon__list a:hover,
+.members-icon__list a:focus {
     background: var(--accent-color);
     border-radius: 50%;
 }
@@ -431,18 +437,17 @@ footer {
 }
 
 .footer-join__list svg {
-    fill: var(--icon-color);
-    width: 44px;
-    height: 44px;
+    fill: var(--primary-white);
+    width: 20;
+    height: 20;
 }
 
-.footer-join__list li:hover svg {
-    fill: var(--primary-white);
+.footer-join__list li:hover{
     background: var(--accent-color);
     border-radius: 50%;
 }
 
-.footer-join__list a:focus svg {
+.footer-join__list a:focus{
     fill: var(--primary-white);
     background: var(--accent-color);
     border-radius: 50%;
@@ -484,8 +489,8 @@ footer {
     gap: 30px;
 }
 
-.partners__list li:hover,
-.partners__list li:focus {
+.partners__link:hover,
+.partners__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -540,8 +545,8 @@ footer {
 
 .clients svg {
     fill: var(--icon-color);
-    width: 100%;
-    height: 100%;
+    width: 106;
+    height: 60;
 }
 
 .clients__list svg:hover,
