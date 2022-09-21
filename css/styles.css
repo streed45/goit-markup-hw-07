@@ -432,6 +432,8 @@ footer {
 
 .footer-join__list svg {
     fill: var(--icon-color);
+    width: 44px;
+    height: 44px;
 }
 
 .footer-join__list li:hover svg {
