@@ -355,6 +355,8 @@ header svg:focus {
 }
 
 .members-icon__list svg {
+    width: 44px;
+    height: 44px;
     fill: var(--icon-color);
 }
 
@@ -438,8 +440,8 @@ footer {
 
 .footer-join__list svg {
     fill: var(--primary-white);
-    width: 20;
-    height: 20;
+    width: 44px;
+    height: 44px;
 }
 
 .footer-join__list li:hover{
@@ -489,8 +491,8 @@ footer {
     gap: 30px;
 }
 
-.partners__link:hover,
-.partners__link:focus {
+.partners__list li:hover,
+.partners__list li:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -537,16 +539,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 }
 
 .clients svg {
     fill: var(--icon-color);
-    width: 106;
-    height: 60;
+    width: 170px;
+    height: 92px;
 }
 
 .clients__list svg:hover,
