@@ -347,16 +347,14 @@ header svg:focus {
     border-radius: 50%;
 }
 
-.members svg:hover,
-.members svg:focus {
+.members a:hover svg,
+.members a:focus svg {
     fill: var(--primary-white);
-    width: 44;
-    height: 44;
 }
 
 .members-icon__list svg {
-    width: 44px;
-    height: 44px;
+    width: 20px;
+    height: 20px;
     fill: var(--icon-color);
 }
 
@@ -440,8 +438,8 @@ footer {
 
 .footer-join__list svg {
     fill: var(--primary-white);
-    width: 44px;
-    height: 44px;
+    width: 20px;
+    height: 20px;
 }
 
 .footer-join__list li:hover{
@@ -543,19 +541,24 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 170px;
+    height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 }
 
 .clients svg {
     fill: var(--icon-color);
-    width: 170px;
-    height: 92px;
+    width: 106px;
+    height: 60px;
 }
 
-.clients__list svg:hover,
+.clients__list a:hover,
+.clients__list a:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.clients__list a:hover svg,
 .clients__list a:focus svg {
     fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
 }
