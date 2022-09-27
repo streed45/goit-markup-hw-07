@@ -132,6 +132,10 @@ header svg {
     fill: var(--secondary-color);
     width: 20;
     height: 20;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 header svg:hover,
@@ -169,6 +173,10 @@ header svg:focus {
     font-weight: 500;
     line-height: 1.15;
     letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .contacts-list__link {
@@ -176,6 +184,10 @@ header svg:focus {
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .shape-contact {
@@ -230,10 +242,58 @@ header svg:focus {
     border: none;
     margin: 0 auto;
     display: block;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .hero-button:focus, .hero-button:hover {
     background: #188CE8;
+}
+
+/* Modal Section */
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-section {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.modal__window {
+    display: flex;
+    justify-content: right;
+    padding: 8px 8px;
+    width: 528px;
+    height: 581px;
+    background: var(--primary-white);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-white);
+    border: rgba(0, 0, 0, 0.1) 1px solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
 }
 
 /* Benefits Section  */
@@ -272,6 +332,10 @@ header svg:focus {
     padding-top: 0px;
 }
 
+.profile img {
+    display: block;
+}
+
 .profile__title {
     font-weight: 700;
     font-size: 36px;
@@ -283,13 +347,43 @@ header svg:focus {
 
 .profile__list {
     display: flex;
+    justify-content: center;
     gap: 30px;
+}
+
+.profile__picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile__picture>.upwards__title {
+    position: absolute;
+    bottom: 0;
+    padding:27px 95px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #fff;
+    width: 370px;
+    height: 70px;
 }
 
 /* Members section */
 
 .members {
     background-color: #F5F4FA;
+}
+
+.members a {
+    transition-property: fill, background, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .members__title {
@@ -372,6 +466,13 @@ footer {
     padding-bottom: 60px;
 }
 
+.footer a {
+    transition-property: color, fill, background, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
 .footer-wrapper {
     display: flex;
     align-items: baseline;
@@ -442,7 +543,7 @@ footer {
     height: 20px;
 }
 
-.footer-join__list li:hover{
+.footer-join__list a:hover{
     background: var(--accent-color);
     border-radius: 50%;
 }
@@ -474,6 +575,10 @@ footer {
     border-radius: 4px;
     border: none;
     padding: 6px 22px;
+    transition-property: color, background, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .options__button:hover, .options__button:focus {
@@ -483,6 +588,41 @@ footer {
 }
 
 /* Partners section */
+.partners a {
+    position: relative;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    overflow: hidden;
+}
+
+.partners a:hover .partners__overlay,
+.partners a:focus .partners__overlay {
+  transform: translatex(0);
+}
+
+.partners__overlay {
+    position: absolute;
+    top: 0;
+    width: 370px;
+    height: 294px;
+    padding: 63px 24px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--primary-white);
+    background-color: rgba(33, 150, 243, 0.9);
+    z-index: 1;
+
+    transform: translatey(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
 .partners__list {
     display: flex;
     flex-wrap: wrap;
@@ -499,10 +639,14 @@ footer {
 }
 
 .partners__container {
+    position: relative;
+    overflow: hidden;
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+    background: var(--primary-white);
+    z-index: 2;
 }
 
 .partners__title {
@@ -520,7 +664,6 @@ footer {
 }
 
 /* Clients section */
-
 .clients__title {
     font-weight: 700;
     font-size: 36px;
@@ -545,12 +688,20 @@ footer {
     height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .clients svg {
     fill: var(--icon-color);
     width: 106px;
     height: 60px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;    
 }
 
 .clients__list a:hover,
@@ -558,7 +709,7 @@ footer {
     border: 1px solid var(--accent-color);
 }
 
-.clients__list a:hover svg,
+.clients__list a:hover svg ,
 .clients__list a:focus svg {
     fill: var(--accent-color);
 }
