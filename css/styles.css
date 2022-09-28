@@ -101,10 +101,21 @@ p{
 }
 
 .current {
+    position: relative;
+    display: block;
     color: var(--accent-color);
 }
 
-
+.current::after {
+    position: absolute;
+    bottom: -8.5px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
 
 /* Components  */
 .logo {
@@ -130,12 +141,9 @@ header a {
 
 header svg {
     fill: var(--secondary-color);
-    width: 20;
-    height: 20;
     transition-property: fill;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 header svg:hover,
@@ -175,8 +183,7 @@ header svg:focus {
     letter-spacing: 0.02em;
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .contacts-list__link {
@@ -186,8 +193,7 @@ header svg:focus {
     color: var(--secondary-color);
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .shape-contact {
@@ -244,8 +250,7 @@ header svg:focus {
     display: block;
     transition-property: background;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .hero-button:focus, .hero-button:hover {
@@ -259,19 +264,18 @@ header svg:focus {
     pointer-events: none;
 }
 
-.modal-section {
+.backdrop {
     position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);;
+    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
     z-index: 3;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
 }
 
 .modal__window {
@@ -283,6 +287,12 @@ header svg:focus {
     background: var(--primary-white);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal__window {
+    transform: scale(3);
 }
 
 .modal__close{
@@ -354,13 +364,15 @@ header svg:focus {
 .profile__picture {
     position: relative;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile__picture>.upwards__title {
     position: absolute;
     bottom: 0;
-    padding:27px 95px;
     margin: 0 auto;
+    padding-top: 27px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -380,10 +392,9 @@ header svg:focus {
 }
 
 .members a {
-    transition-property: fill, background, border-radius;
+    transition-property: fill, background;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .members__title {
@@ -450,6 +461,9 @@ header svg:focus {
     width: 20px;
     height: 20px;
     fill: var(--icon-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .members-icon__list a:hover,
@@ -467,10 +481,9 @@ footer {
 }
 
 .footer a {
-    transition-property: color, fill, background, border-radius;
+    transition-property: background;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .footer-wrapper {
@@ -577,8 +590,7 @@ footer {
     padding: 6px 22px;
     transition-property: color, background, box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .options__button:hover, .options__button:focus {
@@ -593,7 +605,6 @@ footer {
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
     overflow: hidden;
 }
 
@@ -619,8 +630,7 @@ footer {
     transform: translatey(100%);
     transition-property: transform;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .partners__list {
@@ -690,8 +700,7 @@ footer {
     border-radius: 4px;
     transition-property: border;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .clients svg {
@@ -700,8 +709,7 @@ footer {
     height: 60px;
     transition-property: fill;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;    
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
 }
 
 .clients__list a:hover,
