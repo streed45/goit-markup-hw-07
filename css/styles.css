@@ -392,7 +392,7 @@ header svg:focus {
 }
 
 .members a {
-    transition-property: fill, background;
+    transition-property: background;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
