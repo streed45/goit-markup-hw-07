@@ -74,9 +74,63 @@
             <div class="modal__window">
                 <button type="button" class="modal__close" data-modal-close>
                     <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 4.10786L13.8921 3L9.5 7.39214L5.10786 3L4 4.10786L8.39214 8.5L4 12.8921L5.10786 14L9.5 9.60786L13.8921 14L15 12.8921L10.6079 8.5L15 4.10786Z" fill="black"/>
+                        <path d="M15 4.10786L13.8921 3L9.5 7.39214L5.10786 3L4 4.10786L8.39214 8.5L4 12.8921L5.10786 14L9.5 9.60786L13.8921 14L15 12.8921L10.6079 8.5L15 4.10786Z"/>
                     </svg>
                 </button>
+
+                <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+
+                <form class="modal__form">
+                    <div class="form__wraper">
+                        <label class="form__element">
+                            І'мя
+                            <div class="input__wraper">
+                                <svg width="12" height="12" class="icon modal-icon">
+                                    <use href="./images/svgs/modal-icons.svg#icon-modal-name"></use>
+                                </svg>
+                                <input type="text" name="username"
+                                placeholder="" />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form__wraper">
+                        <label class="form__element">
+                            Телефон
+                            <div class="input__wraper">
+                                <svg width="13" height="13" class="icon modal-icon">
+                                    <use href="./images/svgs/modal-icons.svg#icon-modal-tel"></use>
+                                </svg>
+                                <input type="tel" name="phone_number"
+                                placeholder="" />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form__wraper">
+                        <label class="form__element">
+                            Пошта
+                            <div class="input__wraper">
+                                <svg width="15" height="12" class="icon modal-icon">
+                                    <use href="./images/svgs/modal-icons.svg#icon-modal-mail"></use>
+                                </svg>
+                                <input type="email" name="email"
+                                placeholder="" />
+                            </div>
+                        </label>
+                    </div>
+                    <label class="form__feedback">
+                        Коментар
+                        <textarea name="feedback" rows="5"
+                        placeholder="Введіть текст"></textarea>
+                    </label>
+                    <div class="checkbox__wraper">
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="TOS" value="TOS">
+                            Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="form__button">Відправити</button>
+                </form>
             </div>
 
         </div>
@@ -406,6 +460,23 @@
                             </svg></a>
                         </li>
                     </ul>
+                </div>
+
+                <div class="footer__form_wraper">
+                    <h2 class="footer__form_title">
+                        підпишіться на розсилку
+                    </h2>
+                    <form class="footer__form">
+                        <label class="footer__form_label">
+                            <input type="email" name="email"
+                            placeholder="E-mail">
+                        </label>
+                        <button type="button" class="footer__form_button">Підписатися</button>
+                        <svg class="footer__icon" width="24px" height="24px">
+                            <use href="./images/svgs/modal-icons.svg#icon-modal-send"></use>
+                        </svg>
+                    </form>
+                    
                 </div>
         </div>
         

@@ -280,8 +280,8 @@ header svg:focus {
 
 .modal__window {
     display: flex;
-    justify-content: right;
-    padding: 8px 8px;
+    align-items: center;
+    flex-direction: column;
     width: 528px;
     height: 581px;
     background: var(--primary-white);
@@ -299,11 +299,150 @@ header svg:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 490px;
+    margin-top: 8px;
+    margin-right: 8px;
     background: var(--primary-white);
     border: rgba(0, 0, 0, 0.1) 1px solid;
     border-radius: 50%;
-    width: 30px;
     height: 30px;
+    width: 30px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close:hover, .modal__close:focus {
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
+.modal__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-color); 
+}
+
+.form__element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.modal__form {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--secondary-color);
+}
+
+.form__element {
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+}
+
+.form__element input {
+    height: 40px;
+    margin-top: 4px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    padding-left: 40px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__element:hover, .form__element:focus {
+    fill: var(--accent-color);
+}
+
+.form__element input:hover, .form__element input:focus {
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+}
+
+.input__wraper{
+    position: relative;
+}
+
+.input__wraper svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    translate: 0 -50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__feedback textarea {
+    padding: 12px 16px;
+    height: 120px;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    color: rgba(117, 117, 117, 0.5);
+    outline: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__feedback textarea:hover, .form__feedback textarea:focus {
+    border: 1px solid var(--accent-color);
+}
+
+::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form__checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.form__checkbox input {
+    margin-right: 7px;
+}
+
+.form__checkbox a {
+    margin-left: 8px;
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.form__button {
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--primary-white);
+    padding: 10px 32px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__button:hover, .form__button:focus {
+    background: #188CE8;
 }
 
 /* Benefits Section  */
@@ -567,6 +706,76 @@ footer {
     border-radius: 50%;
 }
 
+.footer__form {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__form_wraper {
+    margin-left: 93px;
+}
+
+.footer__form_title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white);
+    margin-bottom: 20px;
+}
+
+.footer__form_label input {
+    background: none;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    padding-left: 16px;
+    margin-right: 12px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__form_label ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__form_button {
+    position: relative;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--primary-white);
+    width: 200px;
+    height: 50px;
+    padding: 10px 0;
+    padding-right: 28px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.footer__form_button svg {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
 
 /* Options section */
 .options__list {
