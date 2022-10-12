@@ -122,10 +122,19 @@
                         <textarea name="feedback" rows="5"
                         placeholder="Введіть текст"></textarea>
                     </label>
-                    <div class="checkbox__wraper">
-                        <label class="form__checkbox">
-                            <input type="checkbox" name="TOS" value="TOS">
-                            Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+                    <div class="form__checkbox">
+                        <input
+                        type="checkbox"
+                        name="agree"
+                        value="agree"
+                        id="agree"
+                        class="visually-hidden"
+                        />
+                        <label for="agree">
+                            <svg class="checkbox" width="12">
+                                <use href="./images/svgs/modal-icons.svg#icon-check"></use>
+                            </svg>
+                            Погоджуюся з розсилкою та приймаю &nbsp;<a href="">Умови договору</a>
                         </label>
                     </div>
                     
@@ -462,22 +471,24 @@
                     </ul>
                 </div>
 
-                <div class="footer__form_wraper">
+                <form class="footer__form">
                     <h2 class="footer__form_title">
-                        підпишіться на розсилку
+                    підпишіться на розсилку
                     </h2>
-                    <form class="footer__form">
+                    <div class="footer__form_wraper">
                         <label class="footer__form_label">
                             <input type="email" name="email"
-                            placeholder="E-mail">
+                            placeholder="E-mail"
+                            required>
                         </label>
-                        <button type="button" class="footer__form_button">Підписатися</button>
-                        <svg class="footer__icon" width="24px" height="24px">
-                            <use href="./images/svgs/modal-icons.svg#icon-modal-send"></use>
-                        </svg>
-                    </form>
-                    
-                </div>
+                        <button type="button" class="footer__form_button">
+                            Підписатися<svg class="footer__icon" width="24" height="24">
+                                <use href="./images/svgs/modal-icons.svg#icon-modal-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                
         </div>
         
 
@@ -487,3 +498,4 @@
 </body>
 
 </html>
+
