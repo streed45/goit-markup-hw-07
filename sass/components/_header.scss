@@ -1,0 +1,84 @@
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+header svg {
+    fill: var(--secondary-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+header svg:hover,
+header svg:focus {
+    fill: var(--accent-color);
+}
+
+.header-wrapper {
+    display: flex;
+}
+
+.header-logo {
+    margin-right: 93px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav__list {
+    display: flex;
+    gap: 50px;
+}
+
+
+.contacts-list {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-nav__link {
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.contacts-list__link {
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.shape-contact {
+    margin-right: 10px;
+}
+
+
+.header-nav__link:hover,
+.header-nav__link:focus,
+.contacts-list__link:hover,
+.contacts-list__link:focus {
+    color: var(--accent-color);
+}
+
+.contacts-list__link:hover svg,
+.contacts-list__link:focus svg {
+    fill: var(--accent-color);
+}
