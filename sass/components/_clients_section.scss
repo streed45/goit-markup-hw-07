@@ -24,7 +24,17 @@
     border-radius: 4px;
     transition-property: border;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    border: 1px solid var(--accent-color);
+    }
+
+    &:hover svg,
+    &:focus svg {
+        fill: var(--accent-color);
+    }
 }
 
 .clients svg {
@@ -34,14 +44,4 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients__list a:hover,
-.clients__list a:focus {
-    border: 1px solid var(--accent-color);
-}
-
-.clients__list a:hover svg,
-.clients__list a:focus svg {
-    fill: var(--accent-color);
 }

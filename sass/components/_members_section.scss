@@ -5,7 +5,12 @@
 .members a {
     transition-property: background;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover svg,
+        &:focus svg {
+            fill: var(--primary-white);
+        }
 }
 
 .members__title {
@@ -61,11 +66,12 @@
     width: 44px;
     background: var(--primary-white);
     border-radius: 50%;
-}
 
-.members a:hover svg,
-.members a:focus svg {
-    fill: var(--primary-white);
+    &:hover,
+        &:focus {
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
 }
 
 .members-icon__list svg {
@@ -75,10 +81,4 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.members-icon__list a:hover,
-.members-icon__list a:focus {
-    background: var(--accent-color);
-    border-radius: 50%;
 }

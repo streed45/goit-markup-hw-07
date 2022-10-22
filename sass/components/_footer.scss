@@ -37,12 +37,10 @@ footer {
 
 .address-item {
     color: rgba(255, 255, 255, 0.6);
-}
-
-
-.address-item:hover,
-.address-item:focus {
-    color: var(--primary-white);
+    &:hover,
+        &:focus {
+            color: var(--primary-white);
+        }
 }
 
 .footer-join {
@@ -73,23 +71,23 @@ footer {
     width: 44px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+
+    &:hover {
+        background: var(--accent-color);
+        border-radius: 50%;
+    }
+
+    &:focus {
+        fill: var(--primary-white);
+        background: var(--accent-color);
+        border-radius: 50%;
+    }
 }
 
 .footer-join__list svg {
     fill: var(--primary-white);
     width: 20px;
     height: 20px;
-}
-
-.footer-join__list a:hover {
-    background: var(--accent-color);
-    border-radius: 50%;
-}
-
-.footer-join__list a:focus {
-    fill: var(--primary-white);
-    background: var(--accent-color);
-    border-radius: 50%;
 }
 
 .footer__form {
@@ -123,7 +121,7 @@ footer {
     outline: none;
 }
 
-.footer__form_label ::placeholder {
+.footer__form_label::placeholder {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
@@ -154,13 +152,14 @@ footer {
     transition-property: background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        background: #188CE8;
+    }
 }
 
 .footer__icon {
     margin-left: 10px;
 }
 
-.footer__form_button:focus,
-.footer__form_button:hover {
-    background: #188CE8;
-}

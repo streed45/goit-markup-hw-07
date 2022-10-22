@@ -13,13 +13,14 @@ header svg {
     fill: var(--secondary-color);
     transition-property: fill;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
 }
 
-header svg:hover,
-header svg:focus {
-    fill: var(--accent-color);
-}
 
 .header-wrapper {
     display: flex;
@@ -53,7 +54,12 @@ header svg:focus {
     letter-spacing: 0.02em;
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+            &:focus{
+                color: var(--accent-color);
+            }
 }
 
 .contacts-list__link {
@@ -63,22 +69,16 @@ header svg:focus {
     color: var(--secondary-color);
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+        &:focus,
+            &:hover svg,
+                &:focus svg {
+                    color: var(--accent-color);
+        }
 }
 
 .shape-contact {
     margin-right: 10px;
-}
-
-
-.header-nav__link:hover,
-.header-nav__link:focus,
-.contacts-list__link:hover,
-.contacts-list__link:focus {
-    color: var(--accent-color);
-}
-
-.contacts-list__link:hover svg,
-.contacts-list__link:focus svg {
-    fill: var(--accent-color);
 }

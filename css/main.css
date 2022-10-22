@@ -1,3 +1,12 @@
+:root {
+  --accent-color: #2196F3;
+  --primary-color: #212121;
+  --secondary-color: #757575;
+  --dark-color: #2F303A;
+  --primary-white: #FFFFFF;
+  --icon-color: #AFB1B8;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,15 +15,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-:root {
-  --accent-color: #2196F3;
-  --primary-color: #212121;
-  --secondary-color: #757575;
-  --dark-color: #2F303A;
-  --primary-white: #FFFFFF;
-  --icon-color: #AFB1B8;
 }
 
 body {
@@ -142,9 +142,7 @@ header svg {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-header svg:hover,
-header svg:focus {
+header svg:hover, header svg:focus {
   fill: var(--accent-color);
 }
 
@@ -181,6 +179,9 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-nav__link:hover, .header-nav__link:focus {
+  color: var(--accent-color);
+}
 
 .contacts-list__link {
   font-weight: 500;
@@ -191,21 +192,12 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.shape-contact {
-  margin-right: 10px;
-}
-
-.header-nav__link:hover,
-.header-nav__link:focus,
-.contacts-list__link:hover,
-.contacts-list__link:focus {
+.contacts-list__link:hover, .contacts-list__link:focus, .contacts-list__link:hover svg, .contacts-list__link:focus svg {
   color: var(--accent-color);
 }
 
-.contacts-list__link:hover svg,
-.contacts-list__link:focus svg {
-  fill: var(--accent-color);
+.shape-contact {
+  margin-right: 10px;
 }
 
 .hero-section {
@@ -246,9 +238,7 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.hero-button:focus,
-.hero-button:hover {
+.hero-button:focus, .hero-button:hover {
   background: #188CE8;
 }
 
@@ -309,9 +299,7 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__close:hover,
-.modal__close:focus {
+.modal__close:hover, .modal__close:focus {
   fill: var(--accent-color);
   cursor: pointer;
 }
@@ -339,6 +327,9 @@ header svg:focus {
   width: 448px;
   margin-bottom: 10px;
 }
+.form__element:hover, .form__element:focus {
+  fill: var(--accent-color);
+}
 
 .form__element input {
   height: 40px;
@@ -351,14 +342,7 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form__element:hover,
-.form__element:focus {
-  fill: var(--accent-color);
-}
-
-.form__element input:hover,
-.form__element input:focus {
+.form__element input:hover, .form__element input:focus {
   border: 1px solid var(--accent-color);
   cursor: pointer;
 }
@@ -394,9 +378,7 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form__feedback textarea:hover,
-.form__feedback textarea:focus {
+.form__feedback textarea:hover, .form__feedback textarea:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -423,6 +405,16 @@ header svg:focus {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.form__checkbox input:checked + label .checkbox {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.form__checkbox input:focus + label .checkbox {
+  border: 2px solid var(--accent-color);
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .form__checkbox a {
   color: var(--accent-color);
@@ -440,17 +432,6 @@ header svg:focus {
   border-radius: 3px;
   margin-right: 8px;
 }
-
-.form__checkbox label {
-  display: flex;
-  align-items: center;
-}
-
-.form__checkbox input:checked + label .checkbox {
-  background-color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-}
-
 .checkbox:hover {
   border: 2px solid var(--accent-color);
   transition-property: background-color, border;
@@ -458,11 +439,9 @@ header svg:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__checkbox input:focus + label .checkbox {
-  border: 2px solid var(--accent-color);
-  transition-property: background-color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.form__checkbox label {
+  display: flex;
+  align-items: center;
 }
 
 .form__button {
@@ -484,9 +463,7 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form__button:hover,
-.form__button:focus {
+.form__button:hover, .form__button:focus {
   background: #188CE8;
 }
 
@@ -575,6 +552,9 @@ header svg:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.members a:hover svg, .members a:focus svg {
+  fill: var(--primary-white);
+}
 
 .members__title {
   font-weight: 700;
@@ -630,10 +610,9 @@ header svg:focus {
   background: var(--primary-white);
   border-radius: 50%;
 }
-
-.members a:hover svg,
-.members a:focus svg {
-  fill: var(--primary-white);
+.members-icon__list a:hover, .members-icon__list a:focus {
+  background: var(--accent-color);
+  border-radius: 50%;
 }
 
 .members-icon__list svg {
@@ -643,12 +622,6 @@ header svg:focus {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.members-icon__list a:hover,
-.members-icon__list a:focus {
-  background: var(--accent-color);
-  border-radius: 50%;
 }
 
 footer {
@@ -691,9 +664,7 @@ footer {
 .address-item {
   color: rgba(255, 255, 255, 0.6);
 }
-
-.address-item:hover,
-.address-item:focus {
+.address-item:hover, .address-item:focus {
   color: var(--primary-white);
 }
 
@@ -725,22 +696,20 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
+.footer-join__list a:hover {
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+.footer-join__list a:focus {
+  fill: var(--primary-white);
+  background: var(--accent-color);
+  border-radius: 50%;
+}
 
 .footer-join__list svg {
   fill: var(--primary-white);
   width: 20px;
   height: 20px;
-}
-
-.footer-join__list a:hover {
-  background: var(--accent-color);
-  border-radius: 50%;
-}
-
-.footer-join__list a:focus {
-  fill: var(--primary-white);
-  background: var(--accent-color);
-  border-radius: 50%;
 }
 
 .footer__form {
@@ -774,21 +743,21 @@ footer {
   outline: none;
 }
 
-.footer__form_label ::-moz-placeholder {
+.footer__form_label::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer__form_label :-ms-input-placeholder {
+.footer__form_label:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer__form_label ::placeholder {
+.footer__form_label::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -817,14 +786,12 @@ footer {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer__form_button:focus, .footer__form_button:hover {
+  background: #188CE8;
+}
 
 .footer__icon {
   margin-left: 10px;
-}
-
-.footer__form_button:focus,
-.footer__form_button:hover {
-  background: #188CE8;
 }
 
 .options__list {
@@ -850,9 +817,7 @@ footer {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.options__button:hover,
-.options__button:focus {
+.options__button:hover, .options__button:focus {
   color: var(--primary-white);
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -865,9 +830,7 @@ footer {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
-
-.partners a:hover .partners__overlay,
-.partners a:focus .partners__overlay {
+.partners a:hover .partners__overlay, .partners a:focus .partners__overlay {
   transform: translatex(0);
 }
 
@@ -899,9 +862,7 @@ footer {
 .partners__list a {
   display: block;
 }
-
-.partners__list a:hover,
-.partners__list a:focus {
+.partners__list a:hover, .partners__list a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -958,6 +919,12 @@ footer {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.clients__list a:hover, .clients__list a:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients__list a:hover svg, .clients__list a:focus svg {
+  fill: var(--accent-color);
+}
 
 .clients svg {
   fill: var(--icon-color);
@@ -966,14 +933,4 @@ footer {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients__list a:hover,
-.clients__list a:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.clients__list a:hover svg,
-.clients__list a:focus svg {
-  fill: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
